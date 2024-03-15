@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/Users/hugo/.cache/nvim/packer_hererocks/2.1.1703358377/share/lua/5.1/?.lua;/Users/hugo/.cache/nvim/packer_hererocks/2.1.1703358377/share/lua/5.1/?/init.lua;/Users/hugo/.cache/nvim/packer_hererocks/2.1.1703358377/lib/luarocks/rocks-5.1/?.lua;/Users/hugo/.cache/nvim/packer_hererocks/2.1.1703358377/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/Users/hugo/.cache/nvim/packer_hererocks/2.1.1703358377/lib/lua/5.1/?.so"
+local package_path_str = "/mnt/nfs/homes/hrecolet/.var/app/io.neovim.nvim/cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/mnt/nfs/homes/hrecolet/.var/app/io.neovim.nvim/cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/mnt/nfs/homes/hrecolet/.var/app/io.neovim.nvim/cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/mnt/nfs/homes/hrecolet/.var/app/io.neovim.nvim/cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/mnt/nfs/homes/hrecolet/.var/app/io.neovim.nvim/cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -74,34 +74,39 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["nvim-comment"] = {
+    loaded = true,
+    path = "/mnt/nfs/homes/hrecolet/.var/app/io.neovim.nvim/data/nvim/site/pack/packer/start/nvim-comment",
+    url = "https://github.com/terrortylor/nvim-comment"
+  },
   ["nvim-treesitter"] = {
     loaded = true,
-    path = "/Users/hugo/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
+    path = "/mnt/nfs/homes/hrecolet/.var/app/io.neovim.nvim/data/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
   ["packer.nvim"] = {
     loaded = true,
-    path = "/Users/hugo/.local/share/nvim/site/pack/packer/start/packer.nvim",
+    path = "/mnt/nfs/homes/hrecolet/.var/app/io.neovim.nvim/data/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   },
   playground = {
     loaded = true,
-    path = "/Users/hugo/.local/share/nvim/site/pack/packer/start/playground",
+    path = "/mnt/nfs/homes/hrecolet/.var/app/io.neovim.nvim/data/nvim/site/pack/packer/start/playground",
     url = "https://github.com/nvim-treesitter/playground"
   },
   ["plenary.nvim"] = {
     loaded = true,
-    path = "/Users/hugo/.local/share/nvim/site/pack/packer/start/plenary.nvim",
+    path = "/mnt/nfs/homes/hrecolet/.var/app/io.neovim.nvim/data/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
   ["rose-pine"] = {
     loaded = true,
-    path = "/Users/hugo/.local/share/nvim/site/pack/packer/start/rose-pine",
+    path = "/mnt/nfs/homes/hrecolet/.var/app/io.neovim.nvim/data/nvim/site/pack/packer/start/rose-pine",
     url = "https://github.com/rose-pine/neovim"
   },
   ["telescope.nvim"] = {
     loaded = true,
-    path = "/Users/hugo/.local/share/nvim/site/pack/packer/start/telescope.nvim",
+    path = "/mnt/nfs/homes/hrecolet/.var/app/io.neovim.nvim/data/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   }
 }
