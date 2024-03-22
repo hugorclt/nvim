@@ -1,4 +1,4 @@
--- This file can be loaded by calling `lua require('plugins')` from your init.vim
+---This file can be loaded by calling `lua require('plugins')` from your init.vim
 local ensure_packer = function()
 	local fn = vim.fn
 	local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
@@ -23,30 +23,19 @@ return require('packer').startup(function(use)
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
 
+	use {
+		'numToStr/Comment.nvim',
+		config = function()
+			require('Comment').setup()
+		end
+	}
+
+	use "sindrets/diffview.nvim"
+
 	use({ 'rose-pine/neovim', as = 'rose-pine' })
 
 	use('nvim-treesitter/nvim-treesitter', {run= ':TSUpdate'})
-	use {
-		"windwp/nvim-autopairs",
-		config = function() require("nvim-autopairs").setup {} end
-	}
-
-	use {
-		'VonHeikemen/lsp-zero.nvim',
-		branch = 'v3.x',
-		requires = {
-			--- Uncomment the two plugins below if you want to manage the language servers from neovim
-			{'williamboman/mason.nvim'},
-			{'williamboman/mason-lspconfig.nvim'},
-
-			-- LSP Support
-			{'neovim/nvim-lspconfig'},
-			-- Autocompletion
-			{'hrsh7th/nvim-cmp'},
-			{'hrsh7th/cmp-nvim-lsp'},
-			{'L3MON4D3/LuaSnip'},
-		}
-	}
+	use({"m4xshen/hardtime.nvim", requires = {"MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim"}})
 
 	if packer_bootstrap then
 		require('packer').sync()
