@@ -4,10 +4,10 @@ require("conform").setup({
 		-- Conform will run multiple formatters sequentially
 		-- python = { "isort", "black" },
 		-- Use a sub-list to run only the first available formatter
-		javascript = { { "prettierd" } },
-		typesecript = { { "prettierd" } },
-		typescriptreact = { { "prettierd" } },
-		javascriptreact = { { "prettierd" } },
+		--		javascript = { { "prettierd" } },
+		--		typesecript = { { "prettierd" } },
+		--		typescriptreact = { { "prettierd" } },
+		--		javascriptreact = { { "prettierd" } },
 	},
 	format_on_save = {
 		-- These options will be passed to conform.format()

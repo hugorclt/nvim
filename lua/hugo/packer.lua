@@ -1,9 +1,9 @@
 ---This file can be loaded by calling `lua require('plugins')` from your init.vim
 local ensure_packer = function()
 	local fn = vim.fn
-	local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
+	local install_path = fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
 	if fn.empty(fn.glob(install_path)) > 0 then
-		fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
+		fn.system({ 'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path })
 		vim.cmd [[packadd packer.nvim]]
 		return true
 	end
@@ -20,9 +20,8 @@ return require('packer').startup(function(use)
 
 	use {
 		'nvim-telescope/telescope.nvim', tag = '0.1.5',
-		requires = { {'nvim-lua/plenary.nvim'} }
+		requires = { { 'nvim-lua/plenary.nvim' } }
 	}
-
 	use {
 		'numToStr/Comment.nvim',
 		config = function()
@@ -30,12 +29,19 @@ return require('packer').startup(function(use)
 		end
 	}
 
+	use {
+		"smjonas/inc-rename.nvim",
+		config = function()
+			require("inc_rename").setup()
+		end,
+	}
+
 	use "sindrets/diffview.nvim"
 
 	use({ 'rose-pine/neovim', as = 'rose-pine' })
 
-	use('nvim-treesitter/nvim-treesitter', {run= ':TSUpdate'})
-	use({"m4xshen/hardtime.nvim", requires = {"MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim"}})
+	use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
+	use({ "m4xshen/hardtime.nvim", requires = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim" } })
 
 	use {
 		'VonHeikemen/lsp-zero.nvim',
@@ -45,10 +51,10 @@ return require('packer').startup(function(use)
 			-- {'williamboman/mason.nvim'},
 			-- {'williamboman/mason-lspconfig.nvim'},
 
-			{'neovim/nvim-lspconfig'},
-			{'hrsh7th/nvim-cmp'},
-			{'hrsh7th/cmp-nvim-lsp'},
-			{'L3MON4D3/LuaSnip'},
+			{ 'neovim/nvim-lspconfig' },
+			{ 'hrsh7th/nvim-cmp' },
+			{ 'hrsh7th/cmp-nvim-lsp' },
+			{ 'L3MON4D3/LuaSnip' },
 		}
 	}
 	use {
