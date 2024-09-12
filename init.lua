@@ -1,2 +1,3 @@
 require("hugo")
-vim.wo.relativenumber = true
+vim.wo.number = true
+vim.opt.relativenumber = true
