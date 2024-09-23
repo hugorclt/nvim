@@ -72,5 +72,4 @@ return require('packer').startup(function(use)
 	if packer_bootstrap then
 		require('packer').sync()
 	end
->>>>>>> de56f2fdbc2d69807c84beee6e4d323342c2c116
 end)
