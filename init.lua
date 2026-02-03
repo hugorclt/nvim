@@ -1,6 +1,7 @@
 require("hugo.settings")
 require("hugo.lazy")
 
+vim.opt.clipboard = "unnamedplus"
 -- Automatically enable treesitter highlighting for any buffer that has a parser
 vim.api.nvim_create_autocmd("FileType", {
   callback = function(ev)

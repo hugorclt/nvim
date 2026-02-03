@@ -1,4 +1,4 @@
 return {
-  dir = "/Users/hugo/Desktop/fun/goldfish.nvim",
+  dir = "/home/hugo/Documents/goldfish.nvim",
   opts = {}
 }
